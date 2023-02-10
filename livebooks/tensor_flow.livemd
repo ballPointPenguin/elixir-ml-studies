@@ -1,0 +1,16 @@
+# Tensor Flow
+
+## About
+
+A **tensor** is a multi-dimensional array of numerical values used in machine learning and data algorithms.
+
+**TensorFlow** was developed by Google Brain and released in 2015. TensorFlow 2.0 was released in 2019.
+Written in Python, C++, and CUDA.
+TensorFlow.js was released in 2019.
+TPU hardware (tensor processing unit) is optimized to perform ML.
+
+**PyTorch** is a similar open source ML library. It was developed by Meta AI and released in 2016.
+It is also written in Python, C++, and CUDA.
+PyTorch is governed by the PyTorch Foundation, a subsidiary of the Linux Foundation, as of 2022.
+
+TensorFlow is more mature and used in more production environments. PyTorch is favored by academia and tends to be more intuitive, flexible, and user-friendly.
