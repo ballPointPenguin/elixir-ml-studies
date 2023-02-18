@@ -1,4 +1,8 @@
-# Libraries
+---
+title: libraries
+created: 2023-02-17T17:32:30.979Z
+modified: 2023-02-17T17:32:30.979Z
+---
 
 ## Libraries
 
