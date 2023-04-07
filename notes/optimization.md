@@ -2,7 +2,7 @@
 title: optimization
 title_custom: true
 created: 2023-04-01T05:20:40.736Z
-modified: 2023-04-07T21:48:38.534Z
+modified: 2023-04-07T22:00:03.690Z
 ---
 
 ## Optimization
@@ -67,7 +67,9 @@ $$\hat{m}_t = \frac{m_t}{1 - \beta_1^t} \quad \text{and} \quad \hat{v}_t = \frac
 
 Update the weights with weight decay and the bias-corrected estimates:
 
-$$w_t = (1 - \text{weight\_decay} \cdot \text{lr}) \cdot w_{t-1} - \text{lr} \cdot \hat{m}_t / (\sqrt{\hat{v}_t} + \epsilon)$$
+```math
+{w_t} = (1 - \text{weight\_decay} \cdot \text{lr}) \cdot w_{t-1} - \text{lr} \cdot \hat{m}_t / (\sqrt{\hat{v}_t} + \epsilon)
+```
 
 In these algorithms, $m_t$ and $v_t$ are the running averages of the first and second moments of the gradients, updated at each time step t.
 $m̂_t$ and $v̂_t$ represent the bias-corrected estimates.
