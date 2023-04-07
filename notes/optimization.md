@@ -2,7 +2,7 @@
 title: optimization
 title_custom: true
 created: 2023-04-01T05:20:40.736Z
-modified: 2023-04-01T05:48:48.730Z
+modified: 2023-04-07T21:48:38.534Z
 ---
 
 ## Optimization
@@ -53,21 +53,21 @@ The update rule for AdamW can be written as:
 Compute the gradient g_t for the current mini-batch.
 Update the first moment estimate:
 
-$m_t = \beta_1 * m_{t-1} + (1 - \beta_1) * g_t$
+$$m_t = \beta_1 * m_{t-1} + (1 - \beta_1) * g_t$$
 
 Update the second moment estimate:
 
-$v_t = \beta_2 * v_{t-1} + (1 - \beta_2) * (g_t * g_t)$
+$$v_t = \beta_2 * v_{t-1} + (1 - \beta_2) * (g_t * g_t)$$
 
 
 Compute the bias-corrected first and second moment estimates:
 
-$\hat{m}_t = \frac{m_t}{1 - \beta_1^t} \quad \text{and} \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t}$
+$$\hat{m}_t = \frac{m_t}{1 - \beta_1^t} \quad \text{and} \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t}$$
 
 
 Update the weights with weight decay and the bias-corrected estimates:
 
-$w_t = (1 - \text{weight\_decay} \cdot \text{lr}) \cdot w_{t-1} - \text{lr} \cdot \hat{m}_t / (\sqrt{\hat{v}_t} + \epsilon)$
+$$w_t = (1 - \text{weight\_decay} \cdot \text{lr}) \cdot w_{t-1} - \text{lr} \cdot \hat{m}_t / (\sqrt{\hat{v}_t} + \epsilon)$$
 
 In these algorithms, $m_t$ and $v_t$ are the running averages of the first and second moments of the gradients, updated at each time step t.
 $m̂_t$ and $v̂_t$ represent the bias-corrected estimates.
